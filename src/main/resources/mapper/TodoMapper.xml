@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.oratest.mapper.TodoMapper">
+    <insert id="insertTodo" parameterType="todoDTO">
+        INSERT INTO TBL_TODO(TODO_ID, CONTENT, TODO_DATE)
+        VALUES (SEQ_TODO.nextval, #{content}, #{todoDate})
+    </insert>
+
+    <select id="selectList" resultType="todoDTO">
+        SELECT TODO_ID, CONTENT, TODO_DATE, FINISHED FROM TBL_TODO
+    </select>
+</mapper>

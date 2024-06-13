@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<fieldset>
+    <legend>TODO 작성</legend>
+    <form th:action="@{/todo/write}" method="post">
+        <div>
+            <label for="content">내용</label>
+            <input type="text" name="content" id="content">
+        </div>
+        <div>
+            <label for="todoDate">날짜</label>
+            <input type="date" name="todoDate" id="todoDate">
+        </div>
+        <div>
+            <button>작성</button>
+        </div>
+    </form>
+</fieldset>
+</body>
+</html>
